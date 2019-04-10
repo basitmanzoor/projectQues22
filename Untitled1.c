@@ -1,40 +1,40 @@
  #include<stdio.h>
 int main()
 {
-int i,j,n,a[50];
+int p,q,n,a[50];
 int frame[10];
 int avail, count=0;
-int no, k;
+int frame_no, k;
  
-            printf("\n ENTER THE NUMBER OF PAGES:\n");
+printf("\n Enter the Number of Pages here :\n");  //here you have to enter the desired number of pages you want
 scanf("%d",&n);
             printf("\n ENTER THE PAGE NUMBER :\n");
-            for(i=1;i<=n;i++)
-            scanf("%d",&a[i]);
+            for(p=1;p<=n;p++)
+            scanf("%d",&a[p]);
             printf("\n ENTER THE NUMBER OF FRAMES :");
-            scanf("%d",&no);
-for(i=0;i<no;i++)
-            frame[i]= -1;
-                        j=0;
+            scanf("%d",&frame_no);
+for(p=0;p<frame_no;p++)
+            frame[p]= -1;
+                        q=0;
                           printf("\tref string\t page frames\n");
-for(i=1;i<=n;i++)
+for(p=1;p<=n;p++)
                         {
-                                    printf("%d\t\t",a[i]);
+                                    printf("%d\t\t",a[p]);
                                     avail=0;
-                                    for(k=0;k<no;k++)
-if(frame[k]==a[i])
+                                    for(k=0;k<frame_no;k++)
+if(frame[k]==a[p])
                                                 avail=1;
                                     if (avail==0)
                                     {
-                                                frame[j]=a[i];
-                                                j=(j+1)%no;
+                                                frame[q]=a[p];
+                                                q=(q+1)%frame_no;
                                                 count++;
-                                                for(k=0;k<no;k++)
+                                                for(k=0;k<frame_no;k++)
                                                 printf("%d\t",frame[k]);
 }
                                     printf("\n");
 }
-                        printf("Page Fault Is %d",count);
+                        printf("Page Fault Is %d",count);  //here you will get the no of page faults in the page replacement
                         return 0;
 }
 
