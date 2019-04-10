@@ -1,7 +1,11 @@
  #include<stdio.h>
 int main()
 {
-int i,j,n,a[50],frame[10],no,k,avail,count=0;
+int i,j,n,a[50];
+int frame[10];
+int avail, count=0;
+int no, k;
+ 
             printf("\n ENTER THE NUMBER OF PAGES:\n");
 scanf("%d",&n);
             printf("\n ENTER THE PAGE NUMBER :\n");
